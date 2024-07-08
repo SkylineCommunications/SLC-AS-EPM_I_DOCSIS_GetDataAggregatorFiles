@@ -67,9 +67,6 @@ namespace GetDataAggregatorFiles_1
 	/// </summary>
 	public class Script
 	{
-		private Dictionary<string, FiberNodeData> dictOfdmaValues = new Dictionary<string, FiberNodeData>();
-		private Dictionary<string, FiberNodeData> dictUsLowSplitValues = new Dictionary<string, FiberNodeData>();
-		private Dictionary<string, FiberNodeData> dictUsHighSplitValues = new Dictionary<string, FiberNodeData>();
 		/// <summary>
 		/// The script entry point.
 		/// </summary>
@@ -134,7 +131,7 @@ namespace GetDataAggregatorFiles_1
 				var validPathsOfdmPeak = GetPaths(engine, isDs ? basePathOfdmPeak + "OFDM_PEAK" : basePathDsPeak + "OFDMA_PEAK", span.Days == 0 ? minSpan : span.Days, endDateTime);
 				SendPathsToRead(engine, validPathsOfdmPeak, dict31Values, isDs);
 
-				var fiberNodeRow = MergeDictionaries(engine, dictQamValues, dict31Values, isDs);
+				var fiberNodeRow = MergeDictionaries(dictQamValues, dict31Values);
 
 				engine.AddScriptOutput("Response", JsonConvert.SerializeObject(fiberNodeRow));
 			}
@@ -185,11 +182,11 @@ namespace GetDataAggregatorFiles_1
 						{
 							if (isDs)
 							{
-								ProcessDsFile(sr, engine, fiberNodeDict);
+								ProcessDsFile(sr, fiberNodeDict);
 							}
 							else
 							{
-								ProcessUsFile(sr, engine, logFile);
+								ProcessUsFile(sr, fiberNodeDict);
 							}
 						}
 					}
@@ -201,17 +198,17 @@ namespace GetDataAggregatorFiles_1
 			}
 		}
 
-		private void ProcessDsFile(StreamReader sr, IEngine engine, Dictionary<string, FiberNodeData> fiberNodeDict)
+		private void ProcessDsFile(StreamReader sr, Dictionary<string, FiberNodeData> fiberNodeDict)
 		{
 			while (!sr.EndOfStream)
 			{
 				string line = sr.ReadLine();
 				string[] parts = line.Split(',');
-				FillDsValues(parts, engine, fiberNodeDict);
+				FillDsValues(parts, fiberNodeDict);
 			}
 		}
 
-		private void ProcessUsFile(StreamReader sr, IEngine engine, string logFile)
+		private void ProcessUsFile(StreamReader sr, Dictionary<string, FiberNodeData> fiberNodeDict)
 		{
 			bool ofdmaFile = false;
 			string line = sr.ReadLine();
@@ -231,102 +228,16 @@ namespace GetDataAggregatorFiles_1
 				string[] parts = line.Split(',');
 				if (ofdmaFile)
 				{
-					FillOfdmaValues(parts, engine);
+					FillOfdmaValues(parts, fiberNodeDict);
 				}
 				else
 				{
-					FillUsValues(parts, engine);
+					FillUsValues(parts, fiberNodeDict);
 				}
 			}
 		}
 
-		private void FillOfdmaValues(string[] parts, IEngine engine)
-		{
-			if (parts.Length >= 3)
-			{
-				string fiberNode = parts[0].Trim('"');
-				string fiberNodeName = parts[1].Trim('"');
-				string utilizationStr = parts[2].Trim('"');
-
-				if (double.TryParse(utilizationStr, NumberStyles.Float, CultureInfo.InvariantCulture, out double utilization))
-				{
-					if (dictOfdmaValues.ContainsKey(fiberNode))
-					{
-						if (utilization > dictOfdmaValues[fiberNode].PeakUtilization)
-						{
-							dictOfdmaValues[fiberNode].PeakUtilization = utilization;
-						}
-					}
-					else
-					{
-						var fiberNodeRow = new FiberNodeData
-						{
-							FnName = fiberNodeName,
-							PeakUtilization = utilization,
-						};
-
-						dictOfdmaValues[fiberNode] = fiberNodeRow;
-					}
-				}
-			}
-		}
-
-
-		private void FillUsValues(string[] parts, IEngine engine)
-		{
-			if (parts.Length >= 4)
-			{
-				string fiberNode = parts[0].Trim('"'); // Get FN ID
-				string fiberNodeName = parts[1].Trim('"'); // Get FN Name
-				string utilizationStrLow = parts[2].Trim('"'); // Get Low Peaks
-				string utilizationStrHigh = parts[3].Trim('"'); // Get high Peaks
-
-				if (double.TryParse(utilizationStrLow, NumberStyles.Float, CultureInfo.InvariantCulture, out double lowUtilization))
-				{
-					if (dictUsLowSplitValues.ContainsKey(fiberNode))
-					{
-						if (lowUtilization > dictUsLowSplitValues[fiberNode].PeakUtilization)
-						{
-							dictUsLowSplitValues[fiberNode].PeakUtilization = lowUtilization;
-						}
-					}
-					else
-					{
-						var fiberNodeRow = new FiberNodeData
-						{
-							FnName = fiberNodeName,
-							PeakUtilization = lowUtilization,
-						};
-
-						dictUsLowSplitValues[fiberNode] = fiberNodeRow;
-					}
-				}
-
-				if (double.TryParse(utilizationStrHigh, NumberStyles.Float, CultureInfo.InvariantCulture, out double highUtilization))
-				{
-					if (dictUsHighSplitValues.ContainsKey(fiberNode))
-					{
-						if (highUtilization > dictUsHighSplitValues[fiberNode].PeakUtilization)
-						{
-							dictUsHighSplitValues[fiberNode].PeakUtilization = highUtilization;
-						}
-					}
-					else
-					{
-						var fiberNodeRow = new FiberNodeData
-						{
-							FnName = fiberNodeName,
-							PeakUtilization = highUtilization,
-						};
-
-						dictUsHighSplitValues[fiberNode] = fiberNodeRow;
-					}
-				}
-			}
-		}
-
-
-		private void FillDsValues(string[] parts, IEngine engine, Dictionary<string, FiberNodeData> fiberNodeDict)
+		private void FillOfdmaValues(string[] parts, Dictionary<string, FiberNodeData> fiberNodeDict)
 		{
 			if (parts.Length >= 3)
 			{
@@ -357,30 +268,107 @@ namespace GetDataAggregatorFiles_1
 			}
 		}
 
-		private Dictionary<string, FiberNodeRow> MergeDictionaries(IEngine engine, Dictionary<string, FiberNodeData> dictDsValues, Dictionary<string, FiberNodeData> dictOfdmValues, bool isDs)
+		private void FillUsValues(string[] parts, Dictionary<string, FiberNodeData> fiberNodeDict)
+		{
+			if (parts.Length >= 4)
+			{
+				string fiberNode = parts[0].Trim('"'); // Get FN ID
+				string fiberNodeName = parts[1].Trim('"'); // Get FN Name
+				string utilizationStrLow = parts[2].Trim('"'); // Get Low Peaks
+				string utilizationStrHigh = parts[3].Trim('"'); // Get high Peaks
+
+				if (double.TryParse(utilizationStrLow, NumberStyles.Float, CultureInfo.InvariantCulture, out double lowUtilization))
+				{
+					if (fiberNodeDict.ContainsKey(fiberNode))
+					{
+						if (lowUtilization > fiberNodeDict[fiberNode].LowUtilization)
+						{
+							fiberNodeDict[fiberNode].LowUtilization = lowUtilization;
+						}
+					}
+					else
+					{
+						var fiberNodeRow = new FiberNodeData
+						{
+							FnName = fiberNodeName,
+							LowUtilization = lowUtilization,
+						};
+
+						fiberNodeDict[fiberNode] = fiberNodeRow;
+					}
+				}
+
+				if (double.TryParse(utilizationStrHigh, NumberStyles.Float, CultureInfo.InvariantCulture, out double highUtilization))
+				{
+					if (fiberNodeDict.ContainsKey(fiberNode))
+					{
+						if (highUtilization > fiberNodeDict[fiberNode].HighUtilization)
+						{
+							fiberNodeDict[fiberNode].HighUtilization = highUtilization;
+						}
+					}
+					else
+					{
+						var fiberNodeRow = new FiberNodeData
+						{
+							FnName = fiberNodeName,
+							HighUtilization = highUtilization,
+						};
+
+						fiberNodeDict[fiberNode] = fiberNodeRow;
+					}
+				}
+			}
+		}
+
+
+		private void FillDsValues(string[] parts, Dictionary<string, FiberNodeData> fiberNodeDict)
+		{
+			if (parts.Length >= 3)
+			{
+				string fiberNode = parts[0].Trim('"');
+				string fiberNodeName = parts[1].Trim('"');
+				string utilizationStr = parts[2].Trim('"');
+
+				if (double.TryParse(utilizationStr, NumberStyles.Float, CultureInfo.InvariantCulture, out double utilization))
+				{
+					if (fiberNodeDict.ContainsKey(fiberNode))
+					{
+						if (utilization > fiberNodeDict[fiberNode].PeakUtilization)
+						{
+							fiberNodeDict[fiberNode].PeakUtilization = utilization;
+						}
+					}
+					else
+					{
+						var fiberNodeRow = new FiberNodeData
+						{
+							FnName = fiberNodeName,
+							PeakUtilization = utilization,
+						};
+
+						fiberNodeDict[fiberNode] = fiberNodeRow;
+					}
+				}
+			}
+		}
+
+		private Dictionary<string, FiberNodeRow> MergeDictionaries(Dictionary<string, FiberNodeData> dictQamValues, Dictionary<string, FiberNodeData> dict31Values)
 		{
 			Dictionary<string, FiberNodeRow> mergedDict = new Dictionary<string, FiberNodeRow>();
 
-			Dictionary<string, string> mergedDictDs = dictDsValues.Concat(dictOfdmValues)
-													.GroupBy(x => x.Key)
-													.ToDictionary(x => x.Key, x => x.Last().Value.FnName);
-
-			Dictionary<string, string> mergedDictUs = dictOfdmaValues.Concat(dictUsLowSplitValues)
-													.GroupBy(x => x.Key)
-													.ToDictionary(x => x.Key, x => x.Last().Value.FnName);
-
-			var keys = isDs ? dictDsValues.Keys.Union(dictOfdmValues.Keys) : dictUsLowSplitValues.Keys.Union(dictOfdmaValues.Keys);
+			var keys = dictQamValues.Keys.Union(dict31Values.Keys);
 
 			foreach (var key in keys)
 			{
 				mergedDict[key] = new FiberNodeRow
 				{
-					FnName = isDs ? mergedDictDs[key] : mergedDictUs[key],
-					DsFnUtilization = dictDsValues.ContainsKey(key) ? dictDsValues[key].PeakUtilization : -1,
-					OfdmFnUtilization = dictOfdmValues.ContainsKey(key) ? dictOfdmValues[key].PeakUtilization : -1,
-					UsFnLowSplitUtilization = dictUsLowSplitValues.ContainsKey(key) ? dictUsLowSplitValues[key].PeakUtilization : -1,
-					UsFnHighSplitUtilization = dictUsHighSplitValues.ContainsKey(key) ? dictUsHighSplitValues[key].PeakUtilization : -1,
-					OfdmaFnUtilization = dictOfdmaValues.ContainsKey(key) ? dictOfdmaValues[key].PeakUtilization : -1,
+					FnName = dictQamValues.ContainsKey(key) ? dictQamValues[key].FnName : dict31Values[key].FnName,
+					DsFnUtilization = dictQamValues.ContainsKey(key) ? dictQamValues[key].PeakUtilization : -1,
+					OfdmFnUtilization = dict31Values.ContainsKey(key) ? dict31Values[key].PeakUtilization : -1,
+					UsFnLowSplitUtilization = dictQamValues.ContainsKey(key) ? dictQamValues[key].LowUtilization : -1,
+					UsFnHighSplitUtilization = dictQamValues.ContainsKey(key) ? dictQamValues[key].HighUtilization : -1,
+					OfdmaFnUtilization = dict31Values.ContainsKey(key) ? dict31Values[key].PeakUtilization : -1,
 				};
 			}
 

@@ -104,9 +104,10 @@
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\FiberNodeRow.cs",
               "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeRow.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\FiberNodeRow.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T17:44:05.197Z"
+              "WhenOpened": "2024-07-02T17:44:05.197Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,9 +117,10 @@
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\FiberNodeData.cs",
               "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeData.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\FiberNodeData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T17:44:00.269Z"
+              "WhenOpened": "2024-07-02T17:44:00.269Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,7 +130,7 @@
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
               "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAwHMAAAAeAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAvwGgBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T17:42:52.596Z",
               "EditorCaption": ""
