@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\",
+  "WorkspaceRootPath": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\automation\\generic\\dataminer solutions\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\getdataaggregatorfiles_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\github\\automation\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\getdataaggregatorfiles_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|solutionrelative:getdataaggregatorfiles_1\\getdataaggregatorfiles_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\automation\\generic\\dataminer solutions\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\fibernoderow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|solutionrelative:getdataaggregatorfiles_1\\fibernoderow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\automation\\generic\\dataminer solutions\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\fibernodedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\github\\automation\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\fibernodedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|solutionrelative:getdataaggregatorfiles_1\\fibernodedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E667FEF9-AC33-4C39-8E83-64143E3965E6}|GetDataAggregatorFiles{E667FEF9-AC33-4C39-8E83-64143E3965E6}|C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\github\\automation\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\fibernoderow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|solutionrelative:getdataaggregatorfiles_1\\fibernoderow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E667FEF9-AC33-4C39-8E83-64143E3965E6}|GetDataAggregatorFiles{E667FEF9-AC33-4C39-8E83-64143E3965E6}|C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E667FEF9-AC33-4C39-8E83-64143E3965E6}|GetDataAggregatorFiles{E667FEF9-AC33-4C39-8E83-64143E3965E6}|solutionrelative:GetDataAggregatorFiles.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\automation\\generic\\dataminer solutions\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\getdataaggregatorfiles_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|c:\\git\\github\\automation\\slc-as-epm_i_docsis_getdataaggregatorfiles\\getdataaggregatorfiles_1\\getdataaggregatorfiles_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{279E9908-BB6E-4E88-84F5-D43807B82B12}|GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj|solutionrelative:getdataaggregatorfiles_1\\getdataaggregatorfiles_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -30,23 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -54,11 +46,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{513ea8d3-d94d-4be6-9179-18ce27f142db}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{c3139ba4-79f5-486d-9ce0-b17394d26f9b}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -66,31 +58,27 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e51e6b11-02d8-4350-932f-095bcbeb79f8}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{c3139ba4-79f5-486d-9ce0-b17394d26f9b}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{7505da5e-07d6-4842-9870-2f708552e445}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{513ea8d3-d94d-4be6-9179-18ce27f142db}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "GetDataAggregatorFiles.xml",
-              "DocumentMoniker": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml",
+              "DocumentMoniker": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml",
               "RelativeDocumentMoniker": "GetDataAggregatorFiles.xml",
-              "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml",
+              "ToolTip": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles.xml",
               "RelativeToolTip": "GetDataAggregatorFiles.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
@@ -98,26 +86,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FiberNodeRow.cs",
-              "DocumentMoniker": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeRow.cs",
+              "DocumentMoniker": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeRow.cs",
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\FiberNodeRow.cs",
-              "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeRow.cs",
+              "ToolTip": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeRow.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\FiberNodeRow.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T17:44:05.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FiberNodeData.cs",
-              "DocumentMoniker": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeData.cs",
+              "DocumentMoniker": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeData.cs",
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\FiberNodeData.cs",
-              "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeData.cs",
+              "ToolTip": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\FiberNodeData.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\FiberNodeData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T17:44:00.269Z",
               "EditorCaption": ""
@@ -126,11 +114,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GetDataAggregatorFiles_1.cs",
-              "DocumentMoniker": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
+              "DocumentMoniker": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
-              "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
+              "ToolTip": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAvwGgBAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAIAwwIcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T17:42:52.596Z",
               "EditorCaption": ""
@@ -139,9 +127,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "GetDataAggregatorFiles_1.csproj",
-              "DocumentMoniker": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
+              "DocumentMoniker": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
               "RelativeDocumentMoniker": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
-              "ToolTip": "C:\\GIT\\Automation\\Generic\\DataMiner Solutions\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
+              "ToolTip": "C:\\GIT\\GitHub\\Automation\\SLC-AS-EPM_I_DOCSIS_GetDataAggregatorFiles\\GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
               "RelativeToolTip": "GetDataAggregatorFiles_1\\GetDataAggregatorFiles_1.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

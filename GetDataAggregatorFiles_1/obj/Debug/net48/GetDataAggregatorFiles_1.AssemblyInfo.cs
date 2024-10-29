@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© Skyline Communications")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e5d0611d67bde3c1fe0fd2c43abdac08b06e04b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b7f7642b349e5005211b65eb49d1c4022e6bc08")]
 [assembly: System.Reflection.AssemblyProductAttribute("GetDataAggregatorFiles_1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GetDataAggregatorFiles_1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
